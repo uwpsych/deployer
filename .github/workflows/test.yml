@@ -2,16 +2,16 @@ name: test
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, v8 ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, v8 ]
 
 jobs:
   unit:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-versions: [ '7.3', '7.4', '8.0', '8.1' ]
+        php-versions: ['8.0', '8.1' ]
     steps:
       - uses: actions/checkout@v2
 
